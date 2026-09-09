@@ -1,0 +1,315 @@
+<!--
+  MAILING BREVO — Menouthias Collection & Mad Caméléon
+  Invitation IFTM Top Résa 2026 (15-17 septembre, Porte de Versailles, Paris)
+
+  COMMENT UTILISER CE FICHIER DANS BREVO :
+  1. Brevo > Campagnes > Email > Créer une campagne email.
+  2. À l'étape "Design", choisissez l'éditeur "Code HTML" (et non le glisser-déposer).
+  3. Collez tout le contenu de ce fichier dans l'éditeur, puis vérifiez l'aperçu.
+  4. Objet suggéré :
+     Madagascar en 2 chapitres — Menouthias Collection & Mad Caméléon | RDV à l'IFTM Top Résa (Stand M076)
+  5. Expéditeur / Répondre à : configurez une adresse surveillée, car l'email invite
+     explicitement les destinataires à "répondre à cet email".
+
+  À PERSONNALISER AVANT ENVOI (cherchez [MAJUSCULES ENTRE CROCHETS]) :
+  - [EMAIL-CONTACT] : adresse utilisée dans le bouton "Réserver mon créneau" (lien mailto).
+  - [RAISON SOCIALE] et [ADRESSE POSTALE] dans le pied de page : obligatoire légalement
+    (loi anti-spam / RGPD) pour un email commercial envoyé en France/UE.
+  - Les tags {{contact.FIRSTNAME}}, {{ unsubscribe }} et {{ mirror }} sont la syntaxe
+    Brevo standard ; Brevo les remplace automatiquement à l'envoi. Vous pouvez définir
+    une valeur de repli pour {{contact.FIRSTNAME}} depuis le bouton "Personnaliser" de
+    l'éditeur Brevo si certains contacts n'ont pas de prénom enregistré.
+  - Des emplacements photo optionnels (commentés) sont prévus dans l'en-tête et dans
+    chaque carte de marque : cherchez "AJOUTER UNE PHOTO".
+
+  Cette structure utilise des tableaux (compatibilité Outlook), des styles both
+  inline + <head> (compatibilité Gmail/Apple Mail), et une mise en pile automatique
+  sur mobile. Aucun JavaScript n'est utilisé : les clients emails (Gmail, Outlook,
+  Apple Mail, Yahoo...) le bloquent systématiquement pour des raisons de sécurité,
+  il serait donc ignoré ou pourrait faire échouer l'envoi.
+-->
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<meta name="x-apple-disable-message-reformatting">
+<title>Madagascar — Menouthias Collection &amp; Mad Caméléon</title>
+
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<style>
+  * { font-family: Arial, sans-serif !important; }
+</style>
+<![endif]-->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+<style>
+  /* Reset */
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+  body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; background-color: #EFEAE0; }
+  table { border-collapse: collapse !important; }
+  a { color: inherit; }
+
+  /* Typography helpers */
+  .font-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+  .font-sans { font-family: 'Poppins', Arial, Helvetica, sans-serif; }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .email-wrapper { width: 100% !important; }
+    .stack-col { display: block !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+    .mobile-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .mobile-pad-sm { padding-left: 16px !important; padding-right: 16px !important; }
+    .h1 { font-size: 24px !important; line-height: 30px !important; }
+    .h2 { font-size: 19px !important; line-height: 25px !important; }
+    .card-gap { height: 16px !important; line-height: 16px !important; font-size: 16px !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#EFEAE0;">
+
+<!-- Texte d'aperçu (masqué) — contrôle ce qui s'affiche dans la boîte de réception -->
+<div style="display:none; font-size:1px; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide:all; font-family:sans-serif;">
+  Deux marques, une même Madagascar. Retrouvons-nous à l'IFTM Top Résa — Stand M076, du 15 au 17 septembre.
+  &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EFEAE0;">
+<tr>
+<td align="center" style="padding: 24px 12px;">
+
+  <!-- Conteneur principal 600px -->
+  <table role="presentation" class="email-wrapper" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#FFFDF9;">
+
+    <!-- Lien "voir en ligne" -->
+    <tr>
+      <td align="center" class="mobile-pad" style="padding: 0 40px 16px 40px; font-family:'Poppins', Arial, sans-serif; font-size:11px; color:#8A8578;">
+        Cet email ne s'affiche pas correctement ?
+        <a href="{{ mirror }}" style="color:#8A8578; text-decoration:underline;">Consultez la version en ligne</a>
+      </td>
+    </tr>
+
+    <!-- En-tête -->
+    <tr>
+      <td align="center" bgcolor="#1F3A34" style="background-color:#1F3A34; padding: 40px 40px 36px 40px;">
+        <!--
+          AJOUTER UNE PHOTO (optionnel) : une image d'ambiance Madagascar (600x260px)
+          peut remplacer ou compléter ce bandeau texte. Ajoutez-la via l'éditeur Brevo
+          (bouton "Image"), qui hébergera le fichier et générera l'URL à coller ici :
+          <img src="URL-FOURNIE-PAR-BREVO" width="520" alt="Madagascar" style="display:block; width:100%; max-width:520px; height:auto; margin:0 0 24px 0; border-radius:4px;">
+        -->
+        <p class="font-sans" style="margin:0 0 14px 0; font-size:12px; line-height:16px; letter-spacing:2px; color:#C9A15C; text-transform:uppercase;">
+          Menouthias Collection&nbsp;&times;&nbsp;Mad Caméléon
+        </p>
+        <h1 class="font-serif h1" style="margin:0; font-size:30px; line-height:38px; color:#FAF6EF; font-weight:600;">
+          Madagascar, deux façons de le vivre
+        </h1>
+      </td>
+    </tr>
+
+    <!-- Introduction -->
+    <tr>
+      <td class="mobile-pad" style="padding: 36px 40px 8px 40px; font-family:'Poppins', Arial, sans-serif; font-size:15px; line-height:24px; color:#3A3A3A;">
+        <p style="margin:0 0 16px 0; font-size:16px; font-weight:600; color:#1F3A34;">
+          Bonjour {{contact.FIRSTNAME}},
+        </p>
+        <p style="margin:0 0 0 0;">
+          Madagascar ne se raconte pas en une seule histoire. La nôtre, depuis plus de 30 ans sur le terrain, s'écrit aujourd'hui en deux chapitres&nbsp;:
+        </p>
+      </td>
+    </tr>
+
+    <!-- Séparateur doré -->
+    <tr>
+      <td align="center" style="padding: 24px 0 4px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td width="60" height="2" bgcolor="#C9A15C" style="background-color:#C9A15C; font-size:2px; line-height:2px;">&nbsp;</td>
+        </tr></table>
+      </td>
+    </tr>
+
+    <!-- Deux cartes de marque -->
+    <tr>
+      <td class="mobile-pad" style="padding: 24px 40px 8px 40px; font-size:0;">
+        <!--[if mso]>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td width="240" valign="top">
+        <![endif]-->
+        <div class="stack-col" style="display:inline-block; width:100%; max-width:240px; vertical-align:top;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #EAE5DA; border-top:3px solid #C9A15C;">
+            <tr>
+              <td align="center" style="padding: 26px 20px;">
+                <!--
+                  AJOUTER UNE PHOTO (optionnel, recommandé 260x160px) :
+                  <img src="URL-FOURNIE-PAR-BREVO" width="220" alt="Menouthias Collection" style="display:block; width:100%; max-width:220px; height:auto; margin:0 0 16px 0;">
+                -->
+                <p class="font-sans" style="margin:0 0 6px 0; font-size:11px; letter-spacing:1.5px; color:#8A8578; text-transform:uppercase;">
+                  Signature sur-mesure
+                </p>
+                <p class="font-serif" style="margin:0 0 12px 0; font-size:20px; line-height:26px; color:#1F3A34; font-weight:600;">
+                  Menouthias Collection
+                </p>
+                <p class="font-sans" style="margin:0 0 20px 0; font-size:13px; line-height:20px; color:#5A5648;">
+                  Une sélection confidentielle d'adresses d'exception à Madagascar, composée autour de chaque voyageur en quête d'exigence, de raffinement et de discrétion.
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                  <td align="center" bgcolor="#1F3A34" style="background-color:#1F3A34;">
+                    <a href="https://www.menouthias.com" target="_blank" class="font-sans" style="display:inline-block; padding:12px 20px; font-size:12px; font-weight:600; letter-spacing:0.5px; color:#C9A15C; text-decoration:none; text-transform:uppercase;">
+                      Découvrir &rarr;
+                    </a>
+                  </td>
+                </tr></table>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--[if mso]>
+        </td>
+        <td width="20"></td>
+        <td width="240" valign="top">
+        <![endif]-->
+        <!-- Espace visible uniquement hors Outlook, entre les deux cartes -->
+        <div class="stack-col card-gap" style="display:inline-block; width:20px; height:1px; line-height:1px; font-size:1px;">&nbsp;</div>
+        <div class="stack-col" style="display:inline-block; width:100%; max-width:240px; vertical-align:top;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #EAE5DA; border-top:3px solid #C8622D;">
+            <tr>
+              <td align="center" style="padding: 26px 20px;">
+                <!--
+                  AJOUTER UNE PHOTO (optionnel, recommandé 260x160px) :
+                  <img src="URL-FOURNIE-PAR-BREVO" width="220" alt="Mad Caméléon" style="display:block; width:100%; max-width:220px; height:auto; margin:0 0 16px 0;">
+                -->
+                <p class="font-sans" style="margin:0 0 6px 0; font-size:11px; letter-spacing:1.5px; color:#8A8578; text-transform:uppercase;">
+                  Expertise historique
+                </p>
+                <p class="font-serif" style="margin:0 0 12px 0; font-size:20px; line-height:26px; color:#1F3A34; font-weight:600;">
+                  Mad Caméléon
+                </p>
+                <p class="font-sans" style="margin:0 0 20px 0; font-size:13px; line-height:20px; color:#5A5648;">
+                  Aventure, Expédition et Nature — en groupes comme en voyages sur mesure.
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                  <td align="center" bgcolor="#C8622D" style="background-color:#C8622D;">
+                    <a href="https://www.madcameleon.com" target="_blank" class="font-sans" style="display:inline-block; padding:12px 20px; font-size:12px; font-weight:600; letter-spacing:0.5px; color:#FFFFFF; text-decoration:none; text-transform:uppercase;">
+                      Découvrir &rarr;
+                    </a>
+                  </td>
+                </tr></table>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--[if mso]>
+        </td>
+        </tr></table>
+        <![endif]-->
+      </td>
+    </tr>
+
+    <!-- Phrase de liaison -->
+    <tr>
+      <td align="center" class="mobile-pad" style="padding: 24px 50px 8px 50px; font-family:'Poppins', Arial, sans-serif; font-size:14px; line-height:22px; color:#5A5648; font-style:italic;">
+        Deux marques, une même connaissance intime du terrain malgache — chacune pour révéler Madagascar à sa manière.
+      </td>
+    </tr>
+
+    <!-- Encart salon IFTM Top Résa -->
+    <tr>
+      <td class="mobile-pad" style="padding: 32px 40px 8px 40px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F3EEE3" style="background-color:#F3EEE3; border:1px solid #E4DCC8;">
+          <tr>
+            <td align="center" class="mobile-pad-sm" style="padding: 32px 36px;">
+              <p class="font-sans" style="margin:0 0 8px 0; font-size:11px; letter-spacing:2px; color:#C8622D; text-transform:uppercase; font-weight:600;">
+                Salon professionnel
+              </p>
+              <p class="font-serif h2" style="margin:0 0 20px 0; font-size:22px; line-height:28px; color:#1F3A34; font-weight:600;">
+                IFTM Top Résa · 15&ndash;17 septembre 2026
+              </p>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 20px auto;">
+                <tr>
+                  <td class="font-sans" style="padding:4px 0; font-size:13px; line-height:20px; color:#3A3A3A;">
+                    <strong style="color:#1F3A34;">Lieu&nbsp;—</strong> Paris, Porte de Versailles
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-sans" style="padding:4px 0; font-size:13px; line-height:20px; color:#3A3A3A;">
+                    <strong style="color:#1F3A34;">Stand&nbsp;—</strong> Office National du Tourisme de Madagascar · Stand M076
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-sans" style="padding:4px 0; font-size:13px; line-height:20px; color:#3A3A3A;">
+                    <strong style="color:#1F3A34;">Comptoir&nbsp;—</strong> Mad Caméléon Travel
+                  </td>
+                </tr>
+              </table>
+
+              <p class="font-sans" style="margin:0 0 8px 0; font-size:14px; line-height:22px; color:#3A3A3A;">
+                Ce sera l'occasion de vous présenter nos dernières exclusivités et de construire ensemble vos prochains programmes Madagascar.
+              </p>
+              <p class="font-sans" style="margin:0 0 24px 0; font-size:14px; line-height:22px; color:#3A3A3A;">
+                Répondez à cet email avec vos disponibilités sur ces trois jours — nous vous réserverons un créneau — ou passez directement à notre comptoir.
+              </p>
+
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                <td align="center" bgcolor="#1F3A34" style="background-color:#1F3A34;">
+                  <!-- [EMAIL-CONTACT] : remplacez par votre adresse de suivi des rendez-vous IFTM -->
+                  <a href="mailto:[EMAIL-CONTACT]?subject=RDV%20IFTM%20Top%20R%C3%A9sa%20-%20Stand%20M076&amp;body=Bonjour%2C%0D%0A%0D%0AJe%20suis%20disponible%20le%20(jour)%20%C3%A0%20(heure)%20sur%20le%20stand%20M076.%0D%0A%0D%0ACordialement%2C" target="_blank" class="font-sans" style="display:inline-block; padding:15px 34px; font-size:13px; font-weight:600; letter-spacing:0.5px; color:#FFFFFF; text-decoration:none; text-transform:uppercase;">
+                    Réserver mon créneau
+                  </a>
+                </td>
+              </tr></table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Signature -->
+    <tr>
+      <td align="center" class="mobile-pad" style="padding: 32px 40px 40px 40px; font-family:'Poppins', Arial, sans-serif; font-size:15px; line-height:24px; color:#3A3A3A;">
+        <p style="margin:0 0 4px 0;">Au plaisir de vous y retrouver&nbsp;!</p>
+        <p style="margin:0; font-style:italic; color:#5A5648;">L'équipe Menouthias Collection &amp; Mad Caméléon</p>
+      </td>
+    </tr>
+
+    <!-- Pied de page -->
+    <tr>
+      <td align="center" bgcolor="#1F3A34" style="background-color:#1F3A34; padding: 30px 40px;">
+        <p class="font-sans" style="margin:0 0 12px 0; font-size:13px; line-height:20px;">
+          <a href="https://www.menouthias.com" target="_blank" style="color:#C9A15C; text-decoration:none;">menouthias.com</a>
+          <span style="color:#5A6B65;">&nbsp;&middot;&nbsp;</span>
+          <a href="https://www.madcameleon.com" target="_blank" style="color:#C9A15C; text-decoration:none;">madcameleon.com</a>
+        </p>
+        <!-- Mention légale obligatoire (anti-spam / RGPD) : à compléter -->
+        <p class="font-sans" style="margin:0 0 12px 0; font-size:11px; line-height:18px; color:#9AAAA4;">
+          [RAISON SOCIALE] — [ADRESSE POSTALE COMPLÈTE]
+        </p>
+        <p class="font-sans" style="margin:0; font-size:11px; line-height:18px; color:#9AAAA4;">
+          Vous recevez cet email en tant que partenaire professionnel du tourisme.
+          <a href="{{ unsubscribe }}" style="color:#9AAAA4; text-decoration:underline;">Se désinscrire</a>
+        </p>
+      </td>
+    </tr>
+
+  </table>
+  <!-- Fin conteneur principal -->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
