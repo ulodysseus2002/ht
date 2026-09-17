@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jersey DTF — Studio de flocage DTF</title>
+<meta name="description" content="Jersey DTF — studio de création et de production DTF pour numéros, noms et logos de maillots : personnalisation en temps réel, gestion d'équipe et planches d'impression optimisées.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="theme-color" content="#08090A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Bebas+Neue&family=Oswald:wght@600&family=Questrial&family=Saira+Stencil+One&family=Orbitron:wght@800&family=Six+Caps&family=Fredoka:wght@600&family=Jost:wght@600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-cfg" viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 3v14M3 8h4" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-team" viewBox="0 0 20 20"><circle cx="7" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M1.5 17c.6-3.5 3-5 5.5-5s4.9 1.5 5.5 5M12 12.3c2.6-.4 5 1 5.8 4.7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-sheet" viewBox="0 0 20 20"><rect x="2.5" y="3.5" width="15" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="5" y="6" width="4" height="4" fill="currentColor"/><rect x="11" y="6" width="4" height="2.5" fill="currentColor"/><rect x="11" y="10.5" width="4" height="3.5" fill="currentColor"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 17v3h16v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 16 16"><path d="M1 1h14v14H1zM1 5.7h14M1 10.3h14M5.7 1v14M10.3 1v14" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+</defs></svg>
+
+<!-- ============ EN-TÊTE SITE ============ -->
+<header class="site-head" id="siteHead">
+  <div class="wrap">
+    <button class="brand" data-go="#/" aria-label="Jersey DTF, accueil">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l15 5v11c0 10-7 17-15 20C12 35 5 28 5 18V7z" fill="#0B0D0E" stroke="#E31B17" stroke-width="2.5"/><text x="20" y="25.5" text-anchor="middle" font-family="Montserrat,Arial Black,sans-serif" font-weight="900" font-size="13" fill="#fff">10</text></svg>
+      <span class="brand-txt"><b>JERSEY <span>DTF</span></b><small>TECH SPORTSWEAR SaaS</small></span>
+    </button>
+    <nav class="nav" aria-label="Navigation principale">
+      <button data-scroll="accueil">Accueil</button>
+      <button data-scroll="solutions">Solutions</button>
+      <button data-scroll="technologie">Technologie</button>
+      <button data-scroll="realisations">Réalisations</button>
+      <button data-scroll="apropos">À propos</button>
+    </nav>
+    <div class="head-right">
+      <button class="btn btn-ghost btn-sm hide-m themeBtn" aria-label="Basculer thème clair / sombre">◐</button>
+      <button class="btn btn-ghost btn-sm hide-m" data-go="#/app/dashboard">Connexion</button>
+      <button class="btn btn-red btn-sm" data-go="#/app/creer">Créer mon numéro</button>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mnav">
+    <button data-scroll="accueil">Accueil</button><button data-scroll="solutions">Solutions</button>
+    <button data-scroll="technologie">Technologie</button><button data-scroll="realisations">Réalisations</button>
+    <button data-scroll="apropos">À propos</button><button data-go="#/app/dashboard">Connexion</button>
+  </div>
+</header>
+
+<!-- ============ SITE VITRINE ============ -->
+<main id="view-home">
+  <section class="hero" id="accueil">
+    <div class="wrap">
+      <div>
+        <span class="pill">Prêt pour impression DTF · 300 DPI</span>
+        <h1>La technologie au service de la personnalisation sportive</h1>
+        <p class="sub">Créez, organisez et préparez vos numéros de maillots pour l'impression DTF, simplement et rapidement.</p>
+        <div class="actions">
+          <button class="btn btn-red" data-go="#/app/creer">Commencer une création</button>
+          <button class="btn btn-line" data-scroll="solution">Découvrir la solution</button>
+        </div>
+        <div class="hero-specs">
+          <div><b>9</b>étapes guidées</div>
+          <div><b>300</b>DPI aux dimensions réelles</div>
+          <div><b>100×60</b>cm de planche optimisée</div>
+        </div>
+      </div>
+      <div class="demo" aria-label="Essai rapide du configurateur">
+        <div class="demo-top"><span>DOS — APERÇU TEMPS RÉEL</span><b id="demoLive">● LIVE</b></div>
+        <div class="demo-stage"><div id="heroJersey"></div></div>
+        <div class="demo-fields">
+          <div><label for="hName">NOM</label><input type="text" id="hName" maxlength="30"></div>
+          <div><label for="hNum">N°</label><input type="text" id="hNum" maxlength="3" inputmode="numeric"></div>
+        </div>
+        <div class="demo-swatches" id="hSw"><span>MAILLOT</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+  <section class="block" id="solution"><div class="wrap">
+    <span class="eyebrow-num">De la création à la production</span>
+    <h2>Une solution de personnalisation de bout en bout</h2>
+    <div class="steps4">
+      <div><div class="n">01</div><h3>Concevoir</h3><p>Créer le numéro.</p></div>
+      <div><div class="n">02</div><h3>Personnaliser</h3><p>Nom, couleurs, contour, logo.</p></div>
+      <div><div class="n">03</div><h3>Organiser</h3><p>Créer plusieurs joueurs.</p></div>
+      <div><div class="n">04</div><h3>Produire</h3><p>Générer les fichiers et planches DTF.</p></div>
+    </div>
+  </div></section>
+
+  <section class="block" id="solutions" style="padding-top:0"><div class="wrap">
+    <span class="eyebrow-num">Particuliers, clubs, imprimeurs, revendeurs</span>
+    <h2>Nos solutions</h2>
+    <div class="solutions" id="solGrid"></div>
+  </div></section>
+
+  <section class="block tech" id="technologie"><div class="wrap">
+    <div>
+      <span class="eyebrow-num">Moteur de placement</span>
+      <h2>Une interface puissante et intuitive</h2>
+      <ul>
+        <li>Interface responsive, sur ordinateur, tablette et mobile</li>
+        <li>Aperçu en temps réel, règles graduées en centimètres</li>
+        <li>Génération haute résolution, 300 DPI aux dimensions réelles</li>
+        <li>Optimisation automatique des planches</li>
+        <li>Gestion des équipes et import CSV / XLSX</li>
+        <li>Sauvegarde automatique des créations</li>
+      </ul>
+      <button class="btn btn-ghost" id="replayPack" style="margin-top:28px">Relancer l'optimisation</button>
+    </div>
+    <div class="tech-visual">
+      <div class="bar"><span>PLANCHE 100 × 60 CM</span><span>OCCUPATION <b id="techOcc">–</b></span></div>
+      <div id="techSheet"></div>
+    </div>
+  </div></section>
+
+  <section class="block" id="realisations"><div class="wrap">
+    <span class="eyebrow-num">Créations réalisées</span>
+    <h2>Réalisations</h2>
+    <div class="chips" id="workFilters" role="group" aria-label="Filtrer les réalisations" style="margin-top:26px"></div>
+    <div class="works" id="worksGrid"></div>
+  </div></section>
+
+  <section class="cta"><div class="wrap">
+    <h2>Votre numéro. Votre style. En quelques clics.</h2>
+    <button class="btn" data-go="#/app/creer">Commencer une création</button>
+  </div></section>
+
+  <footer class="foot" id="apropos"><div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand"><span class="brand-txt"><b>JERSEY <span>DTF</span></b></span></div>
+        <p style="max-width:34ch;margin-top:14px">Création, personnalisation, gestion d'équipe, génération et optimisation des planches : toute la chaîne de production DTF au même endroit.</p>
+      </div>
+      <div><h4>PLATEFORME</h4>
+        <button data-scroll="accueil">Accueil</button><button data-scroll="solutions">Solutions</button>
+        <button data-scroll="technologie">Technologie</button><button data-scroll="realisations">Réalisations</button>
+        <button data-scroll="apropos">À propos</button><a href="#" onclick="return false">Contact</a></div>
+      <div><h4>INFORMATIONS</h4>
+        <a href="#" onclick="return false">Mentions légales</a><a href="#" onclick="return false">Politique de confidentialité</a>
+        <a href="#" onclick="return false">CGU</a><a href="#" onclick="return false">Cookies</a></div>
+      <div><h4>RÉSEAUX</h4>
+        <a href="#" onclick="return false">Facebook</a><a href="#" onclick="return false">Instagram</a>
+        <a href="#" onclick="return false">TikTok</a><a href="#" onclick="return false">YouTube</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Jersey DTF</span><span>Application 100 % locale — vos créations restent dans votre navigateur</span></div>
+  </div></footer>
+</main>
+
+<!-- ============ APPLICATION ============ -->
+<div id="view-app" class="hidden">
+  <header class="appbar">
+    <div class="row">
+      <button class="brand" data-go="#/" aria-label="Retour au site">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l15 5v11c0 10-7 17-15 20C12 35 5 28 5 18V7z" fill="#0B0D0E" stroke="#E31B17" stroke-width="2.5"/><text x="20" y="25.5" text-anchor="middle" font-family="Montserrat,Arial Black,sans-serif" font-weight="900" font-size="13" fill="#fff">10</text></svg>
+        <span class="brand-txt"><b>JERSEY <span>DTF</span></b><small>TECH SPORTSWEAR SaaS</small></span>
+      </button>
+      <div class="status" id="status" role="status"></div>
+      <nav class="tabs" aria-label="Espaces de travail">
+        <button class="tab" data-go="#/app/creer" data-route="creer"><svg><use href="#i-cfg"/></svg>Configurateur</button>
+        <button class="tab" data-go="#/app/equipe" data-route="equipe"><svg><use href="#i-team"/></svg>Gestion<br>d'équipe</button>
+        <button class="tab" data-go="#/app/planche" data-route="planche"><svg><use href="#i-sheet"/></svg><span id="tabSheet">Planche DTF<br>100×60</span></button>
+      </nav>
+      <div class="project" id="project"></div>
+      <button class="newbtn" id="newBtn"><i>＋</i><span>Nouveau<br>flocage</span></button>
+      <div class="avatar">
+        <button id="avatarBtn" aria-haspopup="true" aria-expanded="false" aria-label="Compte de Kalla">10</button>
+        <div class="menu hidden" id="menu">
+          <div class="who"><b>Kalla</b><span class="small muted">Compte club · Équipe A</span></div>
+          <button data-go="#/app/dashboard">Tableau de bord</button>
+          <button data-go="#/app/creations">Mes créations</button>
+          <button data-go="#/app/fichiers">Mes fichiers</button>
+          <button class="themeBtn">Thème clair / sombre</button>
+          <button disabled title="Bientôt disponible">Profil et paramètres</button>
+          <button data-go="#/">Déconnexion</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="appMain"></div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<dialog id="importDlg" aria-labelledby="impTitle">
+  <div class="panel-h"><h2 id="impTitle">Importer une liste de joueurs</h2><button class="icon-btn" id="impClose" aria-label="Fermer">✕</button></div>
+  <div class="panel-b" style="display:grid;gap:14px">
+    <label class="drop" id="impDrop">
+      <input type="file" id="impFile" accept=".csv,.xlsx,.xls,text/csv" hidden>
+      <svg><use href="#i-up"/></svg><b>Choisir un fichier CSV ou XLSX</b><span>Colonnes attendues : nom, numero</span>
+    </label>
+    <div class="field"><label for="impText">Ou coller la liste</label>
+      <textarea class="input" id="impText">nom,numero
+KALLA,10
+AMINE,7
+YANIS,9
+SOFIANE,11
+ADAM,6</textarea></div>
+    <div id="impPreview"></div>
+  </div>
+  <div class="nav-steps">
+    <div class="seg" role="group" aria-label="Mode d'import"><button aria-pressed="true" data-impmode="replace">Remplacer la liste</button><button aria-pressed="false" data-impmode="add">Ajouter à la liste</button></div>
+    <button class="btn btn-red" id="impConfirm">Importer</button>
+  </div>
+</dialog>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
